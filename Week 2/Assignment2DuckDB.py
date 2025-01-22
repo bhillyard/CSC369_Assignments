@@ -55,8 +55,11 @@ def print_most_common(start_time, end_time):
     print(f"- **Execution Time:** {(end_time_process - start_time_process) * 1000:.0f} ms")
     print(f"- **Most Placed Color:** {most_common_color} (Count: {color_count})")
     print(f"- **Most Placed Pixel Location:** {most_common_coord} (Count: {coord_count})")
-    print("- **Most Placed Pixel Location:** No data")
+
+#print_most_common("2022-04-04 01:00:00", "2022-04-04 02:00:00")
+#print_most_common("2022-04-03 11:00:00", "2022-04-03 14:00:00")
+#print_most_common("2022-04-02 11:00:00", "2022-04-02 17:00:00")
 
 print_most_common("2022-04-04 01:00:00", "2022-04-04 02:00:00")
-print_most_common("2022-04-03 11:00:00", "2022-04-03 14:00:00")
-print_most_common("2022-04-02 11:00:00", "2022-04-02 17:00:00")
+print_most_common("2022-04-02 03:00:00", "2022-04-02 06:00:00")
+print_most_common("2022-04-03 11:00:00", "2022-04-03 17:00:00")
