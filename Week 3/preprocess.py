@@ -1,6 +1,6 @@
 import duckdb
 
-# Paths to your input CSV and output Parquet file
+# File paths
 input_csv_file = "2022_place_canvas_with_color_names.csv"
 output_parquet_file = "2022_place_canvas_with_color_names.parquet"
 
