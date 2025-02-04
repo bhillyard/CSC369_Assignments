@@ -1,10 +1,10 @@
 import duckdb
 
 # File paths
-input_parquet_file = "2022_place_canvas_with_color_names.parquet" 
+input_parquet_file = "2022_place_canvas_with_color_names4.parquet" 
 user_mapping_file = "user_mapping.parquet"                        
 output_file_prefix = "chunk_"                                     
-final_output_file = "2022_place_canvas_history_preprocessed.parquet"    
+final_output_file = "2022_place_canvas_history_preprocessed4.parquet"    
 
 # Connect to DuckDB
 con = duckdb.connect()
@@ -32,9 +32,10 @@ for start_offset in range(0, total_rows, chunk_size):
         COPY (
             SELECT p.timestamp,
                    m.numeric_id AS user_id,
+                   p.coordinate,
                    p.ClosestColorName
             FROM (
-                SELECT timestamp, user_id, ClosestColorName
+                SELECT timestamp, user_id, coordinate, ClosestColorName
                 FROM read_parquet('{input_parquet_file}')
                 LIMIT {chunk_size} OFFSET {start_offset}
             ) p
