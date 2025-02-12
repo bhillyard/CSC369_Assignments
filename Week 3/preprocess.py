@@ -1,8 +1,8 @@
 import duckdb
 
 # File paths
-input_csv_file = "2022_place_canvas_with_color_names4.csv"
-output_parquet_file = "2022_place_canvas_with_color_names4.parquet"
+input_csv_file = "2022_place_canvas_history.csv"
+output_parquet_file = "2022_place_canvas_history.parquet"
 
 # Connect to DuckDB
 con = duckdb.connect()
